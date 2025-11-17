@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 01</title>
+</head>
+<body>
+
+    <h2>Separar Nome e Sobrenome</h2>
+
+    <label>Nome completo:</label>
+    <input type="text" id="nomeCompleto">
+    <button onclick="separar()">>></button>
+
+    <br><br>
+
+    <label>Nome:</label>
+    <input type="text" id="nome">
+
+    <br><br>
+
+    <label>Sobrenome:</label>
+    <input type="text" id="sobrenome">
+
+    <script>
+        function separar(){
+            let nomeCompleto = document.getElementById("nomeCompleto").value.trim();
+            let partes = nomeCompleto.split(" ");
+
+            document.getElementById("nome").value = partes[0];
+            document.getElementById("sobrenome").value = partes.slice(1).join(" ");
+        }
+    </script>
+
+</body>
+</html>
 
